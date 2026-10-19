@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio for Almas Khan — Software developer crafting clean, scalable, and high-performance digital experiences."
+    />
+    <meta name="theme-color" content="#12283c" />
+    <title>Almas Khan | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Almas Khan | Portfolio" />
+    <meta property="og:description" content="Software developer crafting clean, scalable, and high-performance digital experiences." />
+    <meta property="og:image" content="assets/profile.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Almas Khan | Portfolio" />
+    <meta name="twitter:description" content="Software developer crafting clean, scalable, and high-performance digital experiences." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        const theme =
+          localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="#top" class="brand" aria-label="Almas Khan Portfolio">
+          <img src="assets/favicon.svg" alt="AK Monogram" class="brand-icon" width="40" height="40" />
+          <span class="brand-title">AK<span>Portfolio</span></span>
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Internships &amp; Certifications</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+            <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-dark">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Software Developer</p>
+            <h1>Hi, I’m Almas Khan — I build clean, reliable digital experiences.</h1>
+            <p class="lead">
+              I design and develop modern web products with a focus on performance,
+              responsiveness, accessibility, and user-centered problem solving.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">View Projects</a>
+              <a class="button secondary" href="assets/Almaskhan_CV.pdf" download="Almaskhan_CV.pdf">
+                Download Resume
+              </a>
+            </div>
+            <ul class="hero-metrics" aria-label="Key metrics">
+              <li><strong>1.5+</strong><span>Years experience</span></li>
+              <li><strong>20+</strong><span>Projects shipped</span></li>
+              <li><strong>10+</strong><span>Technologies used</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Profile photo of Almas Khan">
+            <div class="portrait-card">
+              <img src="assets/profile.jpg" alt="Almas Khan - Software Developer" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container content-grid">
+          <div>
+            <p class="section-label">About</p>
+            <h2>Turning ideas into thoughtful, scalable products.</h2>
+          </div>
+          <div>
+            <p>
+              I’m a multidisciplinary developer with a passion for user experience, product thinking,
+              and writing maintainable code. My work sits at the intersection of design, engineering,
+              and business strategy, helping teams create tools that are practical, scalable, and easy to use.
+            </p>
+            <p>
+              From landing pages to full-featured web applications, I focus on clear communication,
+              efficient workflows, and measurable outcomes. I enjoy collaborating with teams to turn
+              ideas into polished digital experiences that feel intentional and work reliably.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Internships &amp; Certifications</p>
+            <h2>Practical training &amp; verified coursework</h2>
+          </div>
+
+          <h3 class="subsection-title">Internships &amp; Applied Training</h3>
+          <div class="timeline" aria-label="Internships and practical training">
+            <article class="timeline-item">
+              <div class="timeline-date">2024 — Present</div>
+              <div class="timeline-content">
+                <h3>Frontend Developer Intern &amp; Web Training</h3>
+                <p class="company">SkillNexa Academy</p>
+                <p>
+                  Practical internship and hands-on training focusing on responsive user interface design, modern JavaScript (DOM, ES6+), semantic HTML/CSS, and version control collaboration with Git.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-date">2024</div>
+              <div class="timeline-content">
+                <h3>Artificial Intelligence &amp; Python Course</h3>
+                <p class="company">AI Institute of Pakistan</p>
+                <p>
+                  Specialized training in Python programming, artificial intelligence fundamentals, algorithmic problem solving, and exploring intelligent development workflows.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <h3 class="subsection-title" style="margin-top: 2.8rem;">Verified Courses &amp; Certifications</h3>
+          <div class="certs-grid" aria-label="Coursera and verified certifications">
+            <article class="cert-card">
+              <span class="cert-badge">Mobile &amp; Flutter</span>
+              <h4>Cross-Platform Apps with Flutter</h4>
+              <p class="cert-issuer">Honhaar Jawan Program · Punjab</p>
+              <p>End-to-end cross-platform mobile development with Flutter &amp; Dart, widget architecture, state management, and mobile UI/UX.</p>
+              <a href="assets/Official-Certificate-HONHAAR-7F110F539F.pdf" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Certificate &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">Android &amp; Kotlin</span>
+              <h4>Kotlin Apps Development</h4>
+              <p class="cert-issuer">Honhaar Jawan Program · Punjab</p>
+              <p>Modern native Android application engineering using Kotlin, lifecycle management, UI components, and mobile best practices.</p>
+              <a href="assets/Official-Certificate-HONHAAR-A877E8CC51.pdf" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Certificate &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">API Testing &amp; QA</span>
+              <h4>Master API Testing using Postman</h4>
+              <p class="cert-issuer">Honhaar Jawan Program · Punjab</p>
+              <p>REST API validation, endpoint testing, automated request collections, test scripts, and workflow verification with Postman.</p>
+              <a href="assets/Official-Certificate-HONHAAR-EF69601936.pdf" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Certificate &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">Full Stack</span>
+              <h4>Full Stack Web Development</h4>
+              <p class="cert-issuer">Kamyaab Freelancer Program (KFP)</p>
+              <p>Comprehensive curriculum covering HTML5, CSS3, JavaScript, jQuery, Bootstrap, backend PHP development, MySQLi database design, session auth, and CMS projects.</p>
+              <a href="https://kfpprogram.pk" class="cert-link" target="_blank" rel="noopener noreferrer">
+                KFP Program &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">Software Engineering</span>
+              <h4>Introduction to Software Engineering</h4>
+              <p class="cert-issuer">IBM · Coursera</p>
+              <p>SDLC phases, Agile and Scrum methodologies, architecture principles, and software tooling.</p>
+              <a href="https://coursera.org/share/91b39b4c7c9030cfecd54f81366e214d" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Certificate &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">Cloud Computing</span>
+              <h4>Introduction to Cloud Computing</h4>
+              <p class="cert-issuer">IBM · Coursera</p>
+              <p>Cloud service models (IaaS, PaaS, SaaS), virtualization, security, and cloud deployment foundations.</p>
+              <a href="https://www.coursera.org/learn/introduction-to-cloud" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Course &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">Artificial Intelligence</span>
+              <h4>Introduction to Artificial Intelligence (AI)</h4>
+              <p class="cert-issuer">IBM · Coursera</p>
+              <p>Machine learning fundamentals, neural networks, ethics in AI, and real-world implementation use cases.</p>
+              <a href="https://coursera.org/share/0b16fc5146cbc75519457ecf4386dc90" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Certificate &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">Generative AI</span>
+              <h4>Generative AI: Introduction &amp; Applications</h4>
+              <p class="cert-issuer">IBM · Coursera</p>
+              <p>LLM foundations, prompt engineering principles, text and media generation models, and AI tooling.</p>
+              <a href="https://www.coursera.org/learn/generative-ai-introduction-and-applications" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Course &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">AI Strategy</span>
+              <h4>AI for Everyone</h4>
+              <p class="cert-issuer">DeepLearning.AI · Coursera</p>
+              <p>AI workflows, data strategies, technical capabilities, and non-technical machine learning literacy.</p>
+              <a href="https://www.coursera.org/learn/ai-for-everyone" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Course &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">IoT &amp; Systems</span>
+              <h4>Introduction to the Internet of Things (IoT)</h4>
+              <p class="cert-issuer">Coursera</p>
+              <p>Embedded systems, sensor networks, microcontrollers, and hardware-to-cloud communications.</p>
+              <a href="https://coursera.org/share/2d2ecb543724caf27bb10748f824d90a" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Certificate &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">Algorithms</span>
+              <h4>Quickstart: From Algorithm to Prototype</h4>
+              <p class="cert-issuer">Coursera</p>
+              <p>Algorithmic logic, computational problem-solving, and rapid iterative software prototyping.</p>
+              <a href="https://coursera.org/share/9de8222836933b6304cc52cf00319846" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Certificate &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">Research Methods</span>
+              <h4>Understanding Research Methods</h4>
+              <p class="cert-issuer">University of London · Coursera</p>
+              <p>Quantitative and qualitative research design, analytical reasoning, and structured evaluation.</p>
+              <a href="https://coursera.org/share/6823f190a19020033b7256b48337ad99" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Certificate &rarr;
+              </a>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-badge">In Progress</span>
+              <h4>More Certifications &amp; Courses</h4>
+              <p class="cert-issuer">Technical Institutes &amp; Online Platforms</p>
+              <p>Currently undertaking further advanced courses in web architecture and full-stack software development.</p>
+              <span class="cert-link pending">Uploading soon &rarr;</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Projects</p>
+            <h2>Selected work</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-badge">Web Game / Canvas</div>
+              <h3>Stickman</h3>
+              <p>
+                An arcade browser game where a stickman builds bridges to cross pillars. Features procedural level generation, coin collection, leaderboards, and smooth physics.
+              </p>
+              <ul>
+                <li>HTML5 Canvas + JavaScript</li>
+                <li>Procedural level generation</li>
+                <li>Physics & animation engine</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-btn primary" href="https://github.com/Almaskhan19/Stickman" target="_blank" rel="noopener noreferrer">
+                  View Repo &rarr;
+                </a>
+                <a class="project-btn secondary" href="https://github.com/Almaskhan19/Stickman" target="_blank" rel="noopener noreferrer">
+                  Source Code
+                </a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-badge">Full Stack / E-Commerce</div>
+              <h3>E-Commerce Platform</h3>
+              <p>
+                A modern e-commerce web platform engineered for responsive product discovery, cart flows, dynamic filtering, and a clean checkout experience.
+              </p>
+              <ul>
+                <li>TypeScript architecture</li>
+                <li>Product catalog & cart flow</li>
+                <li>Responsive mobile-first layout</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-btn primary" href="https://github.com/Almaskhan19/E_commerce-Website" target="_blank" rel="noopener noreferrer">
+                  View Repo &rarr;
+                </a>
+                <a class="project-btn secondary" href="https://github.com/Almaskhan19/E_commerce-Website" target="_blank" rel="noopener noreferrer">
+                  Source Code
+                </a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-badge">Mobile App</div>
+              <h3>Flip Coin</h3>
+              <p>
+                An interactive mobile utility application crafted with Dart and Flutter featuring physics-driven flip animations and an intuitive tactile mobile interface.
+              </p>
+              <ul>
+                <li>Flutter & Dart</li>
+                <li>Android native compilation</li>
+                <li>Smooth micro-interactions</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-btn primary" href="https://github.com/Almaskhan19/flip_coin" target="_blank" rel="noopener noreferrer">
+                  View Repo &rarr;
+                </a>
+                <a class="project-btn secondary" href="https://github.com/Almaskhan19/flip_coin" target="_blank" rel="noopener noreferrer">
+                  Source Code
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Skills</p>
+            <h2>Tools and capabilities</h2>
+          </div>
+          <div class="skills-wrap">
+            <div class="skill-group">
+              <h3>Frontend Development</h3>
+              <div class="pill-list">
+                <span>HTML5 / Semantic</span>
+                <span>CSS3 / Animations</span>
+                <span>JavaScript (ES6+)</span>
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Bootstrap</span>
+                <span>Responsive Design</span>
+                <span>Web Accessibility</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>Backend &amp; Databases</h3>
+              <div class="pill-list">
+                <span>PHP</span>
+                <span>MySQL / MySQLi</span>
+                <span>REST APIs</span>
+                <span>CRUD Systems</span>
+                <span>WordPress</span>
+                <span>Database Design</span>
+                <span>Session Auth</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>Mobile &amp; Engineering</h3>
+              <div class="pill-list">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Kotlin</span>
+                <span>Postman (API Testing)</span>
+                <span>Git &amp; GitHub</span>
+                <span>Agile / Scrum</span>
+                <span>SEO &amp; Performance</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>AI Automation &amp; Design</h3>
+              <div class="pill-list">
+                <span>n8n (AI Automation)</span>
+                <span>Google Stitch (AI UI/UX)</span>
+                <span>Figma (Prototyping)</span>
+                <span>Workflow Automation</span>
+                <span>AI Agent Integration</span>
+                <span>Prompt Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="container two-column">
+          <div>
+            <p class="section-label">Education</p>
+            <h2>Formal training and continuous learning</h2>
+          </div>
+          <div class="education-list">
+            <div class="education-item">
+              <h3>Bachelor of Software Engineering</h3>
+              <p>Abasyn University, Peshawar</p>
+              <p class="education-period">Spring 2024 — Present · 6th Semester</p>
+              <span>B.S. Software Engineering</span>
+            </div>
+            <div class="education-item">
+              <h3>Intermediate in Computer Science (I.C.S)</h3>
+              <p>Quaid-e-Azam Group of School and College</p>
+              <p class="education-period">2022 — 2023</p>
+              <span>Pre-Engineering &amp; Computer Science</span>
+            </div>
+            <div class="education-item">
+              <h3>Secondary School Certificate (Matric)</h3>
+              <p>Islamia Model High School, Nizampur</p>
+              <p class="education-period">2020 — 2021</p>
+              <span>SSC</span>
+            </div>
+            <div class="education-item">
+              <h3>Diploma in Information Technology (D.I.T)</h3>
+              <p>Shahcome Institute of Information and Technology</p>
+              <p class="education-period">2022 — 2023</p>
+              <span>D.I.T</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-dark contact-section">
+        <div class="container contact-container">
+          <div class="contact-info">
+            <p class="section-label light">Contact</p>
+            <h2>Let’s build something extraordinary together.</h2>
+            <p class="contact-copy">
+              Have a project in mind, an engineering role to fill, or just want to discuss modern web technologies? Send me a message and I’ll get back to you within 24 hours.
+            </p>
+            <div class="contact-meta">
+              <div class="meta-item">
+                <span class="meta-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Direct Email</strong>
+                  <a href="mailto:almaskhankhattak19@gmail.com">almaskhankhattak19@gmail.com</a>
+                </div>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <span>Remote / Available Worldwide</span>
+                </div>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon" aria-hidden="true">⚡</span>
+                <div>
+                  <strong>Availability</strong>
+                  <span>Open for frontend roles & consulting</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a class="social-pill" href="https://github.com/Almaskhan19" target="_blank" rel="noopener noreferrer">
+                GitHub &rarr;
+              </a>
+              <a class="social-pill" href="https://pk.linkedin.com/in/almas-khan-7b9aa1373" target="_blank" rel="noopener noreferrer">
+                LinkedIn &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Get in Touch</h3>
+            <p class="contact-card-desc">
+              Have a project inquiry, job opportunity, or just want to connect? Send an email directly or copy my address with one click.
+            </p>
+
+            <div class="contact-email-display" id="email-display-box" title="Click to copy email address" role="button" tabindex="0">
+              <span class="email-address" id="email-text">almaskhankhattak19@gmail.com</span>
+              <button id="copy-email-btn" class="copy-btn" aria-label="Copy email address" title="Copy email address" type="button">
+                <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-label" id="copy-label">Copy</span>
+              </button>
+            </div>
+
+            <div class="contact-card-actions">
+              <a class="button primary contact-mail-btn" id="compose-gmail-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=almaskhankhattak19@gmail.com" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Compose in Gmail</span>
+              </a>
+              <a class="contact-client-link" href="mailto:almaskhankhattak19@gmail.com" title="Open in default desktop mail application">
+                Or open with default email app &rarr;
+              </a>
+            </div>
+
+            <div class="quick-topics">
+              <p class="quick-topics-title">Quick subject templates:</p>
+              <div class="quick-pills">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=almaskhankhattak19@gmail.com&su=Project%20Inquiry%20%E2%80%94%20Almas%20Khan&body=Hi%20Almas%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20inquiry%20with%20you." target="_blank" rel="noopener noreferrer" class="topic-pill">
+                  <span>💼 Project Inquiry</span>
+                  <span class="topic-arrow">&rarr;</span>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=almaskhankhattak19@gmail.com&su=Job%20Opportunity%20%E2%80%94%20Almas%20Khan&body=Hi%20Almas%2C%0A%0AWe%20have%20an%20engineering%20opportunity%20that%20matches%20your%20background%20in%20software%20development." target="_blank" rel="noopener noreferrer" class="topic-pill">
+                  <span>🚀 Job Opportunity</span>
+                  <span class="topic-arrow">&rarr;</span>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=almaskhankhattak19@gmail.com&su=Collaboration%20%E2%80%94%20Almas%20Khan&body=Hi%20Almas%2C%0A%0AI%20would%20like%20to%20connect%20and%20explore%20collaborating%20on%20a%20project." target="_blank" rel="noopener noreferrer" class="topic-pill">
+                  <span>🤝 Collaboration</span>
+                  <span class="topic-arrow">&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <div id="copy-feedback" class="copy-feedback" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> Almas Khan</p>
+        <div class="social-links">
+          <a href="https://github.com/Almaskhan19" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://pk.linkedin.com/in/almas-khan-7b9aa1373" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
