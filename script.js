@@ -263,3 +263,116 @@ if (emailTextEl) {
     });
   });
 }
+
+// ----------------------------------------------------
+// 5. Hero Metric Counters Animation
+// ----------------------------------------------------
+const initCounters = () => {
+  const counters = document.querySelectorAll('.counter[data-target]');
+  if (!counters.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return; // Keep pre-rendered static values
+
+  const animateCounter = (el) => {
+    const target = parseFloat(el.getAttribute('data-target'));
+    const decimals = parseInt(el.getAttribute('data-decimal') || '0', 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 1500;
+    const startTime = performance.now();
+
+    const step = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease-out cubic: 1 - (1 - t)^3
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentVal = (easeProgress * target).toFixed(decimals);
+      el.textContent = `${currentVal}${suffix}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = `${target.toFixed(decimals)}${suffix}`;
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const metricsContainer = document.querySelector('.hero-metrics');
+  if (metricsContainer && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            counters.forEach((c) => animateCounter(c));
+            obs.disconnect();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(metricsContainer);
+  } else {
+    counters.forEach((c) => animateCounter(c));
+  }
+};
+
+initCounters();
+
+// ----------------------------------------------------
+// 6. Scroll-Driven Entrance Reveals
+// ----------------------------------------------------
+const initScrollReveals = () => {
+  const revealEls = document.querySelectorAll('.reveal-on-scroll');
+  if (!revealEls.length) return;
+
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealEls.forEach((el) => el.classList.add('is-revealed'));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.08,
+    }
+  );
+
+  revealEls.forEach((el) => revealObserver.observe(el));
+};
+
+initScrollReveals();
+
+// ----------------------------------------------------
+// 7. Back-to-Top Floating Button
+// ----------------------------------------------------
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+  const toggleBackToTop = () => {
+    if (window.scrollY > 380) {
+      backToTopBtn.classList.add('is-visible');
+    } else {
+      backToTopBtn.classList.remove('is-visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+}
+
