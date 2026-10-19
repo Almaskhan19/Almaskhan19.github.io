@@ -5,14 +5,16 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Design-Responsive-success?style=for-the-badge)](https://en.wikipedia.org/wiki/Responsive_web_design)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://almaskhan19.github.io/)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://almaskhan-portfolio.vercel.app/)
+[![Netlify](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://almaskhan-portfolio.netlify.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 <p align="center">
   A clean, modern, and high-performance personal portfolio website showcasing real-world software engineering projects, verified industry certifications, internships, and technical skills.
 </p>
 
-[**Explore Live Demo**](https://almaskhan19.github.io/) · [**Report Bug**](https://github.com/Almaskhan19/Almaskhan19.github.io/issues) · [**Request Feature**](https://github.com/Almaskhan19/Almaskhan19.github.io/issues)
+[**🌐 Live Demo (GitHub Pages)**](https://almaskhan19.github.io/) · [**⚡ Vercel Mirror**](https://almaskhan-portfolio.vercel.app/) · [**🚀 Netlify Mirror**](https://almaskhan-portfolio.netlify.app/) · [**Report Issue**](https://github.com/Almaskhan19/Almaskhan19.github.io/issues)
 
 </div>
 
