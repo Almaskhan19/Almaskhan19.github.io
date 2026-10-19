@@ -12,7 +12,7 @@
   A clean, modern, and high-performance personal portfolio website showcasing real-world software engineering projects, verified industry certifications, internships, and technical skills.
 </p>
 
-[**Explore Live Demo**](https://almaskhan19.github.io/) · [**Report Bug**](https://github.com/Almaskhan19/portfolio/issues) · [**Request Feature**](https://github.com/Almaskhan19/portfolio/issues)
+[**Explore Live Demo**](https://almaskhan19.github.io/) · [**Report Bug**](https://github.com/Almaskhan19/Almaskhan19.github.io/issues) · [**Request Feature**](https://github.com/Almaskhan19/Almaskhan19.github.io/issues)
 
 </div>
 
@@ -82,8 +82,8 @@ MY_Profile/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Almaskhan19/portfolio.git
-   cd portfolio
+   git clone https://github.com/Almaskhan19/Almaskhan19.github.io.git
+   cd Almaskhan19.github.io
    ```
 
 2. **Open the project:**
@@ -102,14 +102,15 @@ MY_Profile/
 
 ## 🌐 Deployment to GitHub Pages
 
+Because this repository is named `Almaskhan19.github.io`, GitHub Pages automatically publishes your site as your primary user domain!
+
 1. In your GitHub repository, navigate to **Settings** > **Pages**.
 2. Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
 3. Select branch: `main` and folder: `/ (root)`.
-4. Click **Save**. Your portfolio will be live in seconds at:
+4. Click **Save**. Your portfolio will be live at:
    ```text
-   https://almaskhan19.github.io/portfolio/
+   https://almaskhan19.github.io/
    ```
-   *(Or `https://almaskhan19.github.io/` if the repository is named `Almaskhan19.github.io`)*.
 
 ---
 
