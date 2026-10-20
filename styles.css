@@ -611,17 +611,20 @@ p {
   cursor: default;
 }
 
-/* Project Filter Buttons */
-.project-filters {
+/* Project & Certification Filter Buttons */
+.project-filters,
+.cert-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
   margin-bottom: 2rem;
 }
 
-.filter-btn {
+.filter-btn,
+.cert-filter-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 0.55rem 1.15rem;
   border-radius: 999px;
   background: var(--surface);
@@ -630,46 +633,56 @@ p {
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
+  outline: none;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.filter-btn:hover {
+.filter-btn:hover,
+.cert-filter-btn:hover {
   color: var(--primary-strong);
   border-color: var(--accent);
   transform: translateY(-1px);
 }
 
-.filter-btn.active {
+.filter-btn.active,
+.cert-filter-btn.active {
   background: var(--accent);
   color: #ffffff;
   border-color: var(--accent);
   box-shadow: 0 4px 14px rgba(53, 107, 179, 0.28);
 }
 
-[data-theme="dark"] .filter-btn {
+[data-theme="dark"] .filter-btn,
+[data-theme="dark"] .cert-filter-btn {
   background: var(--surface);
   border-color: var(--border);
   color: var(--muted);
 }
 
-[data-theme="dark"] .filter-btn:hover {
+[data-theme="dark"] .filter-btn:hover,
+[data-theme="dark"] .cert-filter-btn:hover {
   color: #ffffff;
   border-color: rgba(92, 158, 255, 0.4);
 }
 
-[data-theme="dark"] .filter-btn.active {
+[data-theme="dark"] .filter-btn.active,
+[data-theme="dark"] .cert-filter-btn.active {
   background: #2563eb;
   color: #ffffff;
   border-color: #2563eb;
   box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
 }
 
-.project-card.is-hidden {
+.project-card.is-hidden,
+.cert-card.is-hidden {
   display: none !important;
 }
 
-.project-card.filter-animating {
+.project-card.filter-animating,
+.cert-card.filter-animating {
   animation: filterFadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 

@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2.2" />
     <script>
       (function () {
         const theme =
@@ -174,8 +174,17 @@
           </div>
 
           <h3 class="subsection-title" style="margin-top: 2.8rem;">Verified Courses &amp; Certifications</h3>
+
+          <div class="cert-filters reveal-on-scroll" role="toolbar" aria-label="Filter certifications by category">
+            <button type="button" class="cert-filter-btn active" data-cert-filter="all">All (13)</button>
+            <button type="button" class="cert-filter-btn" data-cert-filter="ai">AI &amp; Machine Learning</button>
+            <button type="button" class="cert-filter-btn" data-cert-filter="web-cloud">Web &amp; Cloud</button>
+            <button type="button" class="cert-filter-btn" data-cert-filter="mobile">Mobile Development</button>
+            <button type="button" class="cert-filter-btn" data-cert-filter="engineering">Software &amp; Systems</button>
+          </div>
+
           <div class="certs-grid" aria-label="Coursera and verified certifications">
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="mobile">
               <span class="cert-badge">Mobile &amp; Flutter</span>
               <h4>Cross-Platform Apps with Flutter</h4>
               <p class="cert-issuer">Honhaar Jawan Program · Punjab</p>
@@ -185,7 +194,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="mobile">
               <span class="cert-badge">Android &amp; Kotlin</span>
               <h4>Kotlin Apps Development</h4>
               <p class="cert-issuer">Honhaar Jawan Program · Punjab</p>
@@ -195,7 +204,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="web-cloud">
               <span class="cert-badge">API Testing &amp; QA</span>
               <h4>Master API Testing using Postman</h4>
               <p class="cert-issuer">Honhaar Jawan Program · Punjab</p>
@@ -205,7 +214,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="web-cloud">
               <span class="cert-badge">Full Stack</span>
               <h4>Full Stack Web Development</h4>
               <p class="cert-issuer">Kamyaab Freelancer Program (KFP)</p>
@@ -215,7 +224,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="engineering">
               <span class="cert-badge">Software Engineering</span>
               <h4>Introduction to Software Engineering</h4>
               <p class="cert-issuer">IBM · Coursera</p>
@@ -225,7 +234,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="web-cloud">
               <span class="cert-badge">Cloud Computing</span>
               <h4>Introduction to Cloud Computing</h4>
               <p class="cert-issuer">IBM · Coursera</p>
@@ -235,7 +244,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="ai">
               <span class="cert-badge">Artificial Intelligence</span>
               <h4>Introduction to Artificial Intelligence (AI)</h4>
               <p class="cert-issuer">IBM · Coursera</p>
@@ -245,7 +254,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="ai">
               <span class="cert-badge">Generative AI</span>
               <h4>Generative AI: Introduction &amp; Applications</h4>
               <p class="cert-issuer">IBM · Coursera</p>
@@ -255,7 +264,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="ai">
               <span class="cert-badge">AI Strategy</span>
               <h4>AI for Everyone</h4>
               <p class="cert-issuer">DeepLearning.AI · Coursera</p>
@@ -265,7 +274,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="engineering">
               <span class="cert-badge">IoT &amp; Systems</span>
               <h4>Introduction to the Internet of Things (IoT)</h4>
               <p class="cert-issuer">Coursera</p>
@@ -275,7 +284,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="engineering">
               <span class="cert-badge">Algorithms</span>
               <h4>Quickstart: From Algorithm to Prototype</h4>
               <p class="cert-issuer">Coursera</p>
@@ -285,7 +294,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="engineering">
               <span class="cert-badge">Research Methods</span>
               <h4>Understanding Research Methods</h4>
               <p class="cert-issuer">University of London · Coursera</p>
@@ -295,7 +304,7 @@
               </a>
             </article>
 
-            <article class="cert-card reveal-on-scroll">
+            <article class="cert-card reveal-on-scroll" data-cert-category="engineering">
               <span class="cert-badge">In Progress</span>
               <h4>More Certifications &amp; Courses</h4>
               <p class="cert-issuer">Technical Institutes &amp; Online Platforms</p>
@@ -627,6 +636,6 @@
       </svg>
     </button>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2.2"></script>
   </body>
 </html>

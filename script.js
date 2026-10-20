@@ -414,4 +414,40 @@ const initProjectFilters = () => {
 
 initProjectFilters();
 
+// ----------------------------------------------------
+// 9. Interactive Certification Category Filtering
+// ----------------------------------------------------
+const initCertFilters = () => {
+  const certFilterBtns = document.querySelectorAll('.cert-filter-btn');
+  const certCards = document.querySelectorAll('.cert-card[data-cert-category]');
+  if (!certFilterBtns.length || !certCards.length) return;
 
+  certFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-cert-filter');
+
+      // Update active button state
+      certFilterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter cert cards with smooth entrance animation
+      certCards.forEach((card) => {
+        const category = card.getAttribute('data-cert-category');
+        const match = filter === 'all' || category === filter;
+
+        if (match) {
+          card.classList.remove('is-hidden');
+          // Re-trigger micro-animation
+          card.classList.remove('filter-animating');
+          void card.offsetWidth; // Force DOM reflow
+          card.classList.add('filter-animating');
+        } else {
+          card.classList.add('is-hidden');
+          card.classList.remove('filter-animating');
+        }
+      });
+    });
+  });
+};
+
+initCertFilters();
