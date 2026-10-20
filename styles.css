@@ -611,6 +611,79 @@ p {
   cursor: default;
 }
 
+/* Project Filter Buttons */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.filter-btn:hover {
+  color: var(--primary-strong);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(53, 107, 179, 0.28);
+}
+
+[data-theme="dark"] .filter-btn {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+[data-theme="dark"] .filter-btn:hover {
+  color: #ffffff;
+  border-color: rgba(92, 158, 255, 0.4);
+}
+
+[data-theme="dark"] .filter-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.project-card.is-hidden {
+  display: none !important;
+}
+
+.project-card.filter-animating {
+  animation: filterFadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes filterFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

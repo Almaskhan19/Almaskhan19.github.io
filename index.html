@@ -312,8 +312,16 @@
             <p class="section-label">Projects</p>
             <h2>Selected work</h2>
           </div>
+
+          <div class="project-filters reveal-on-scroll" role="toolbar" aria-label="Filter projects by category">
+            <button type="button" class="filter-btn active" data-filter="all">All (4)</button>
+            <button type="button" class="filter-btn" data-filter="web">Web &amp; Full-Stack</button>
+            <button type="button" class="filter-btn" data-filter="mobile">Mobile (Flutter)</button>
+            <button type="button" class="filter-btn" data-filter="game">Web Game / Canvas</button>
+          </div>
+
           <div class="project-grid">
-            <article class="project-card reveal-on-scroll">
+            <article class="project-card reveal-on-scroll" data-category="game">
               <div class="project-badge">Web Game / Canvas</div>
               <h3>Stickman</h3>
               <p>
@@ -333,7 +341,7 @@
                 </a>
               </div>
             </article>
-            <article class="project-card reveal-on-scroll">
+            <article class="project-card reveal-on-scroll" data-category="web">
               <div class="project-badge">Full Stack / E-Commerce</div>
               <h3>E-Commerce Platform</h3>
               <p>
@@ -353,7 +361,7 @@
                 </a>
               </div>
             </article>
-            <article class="project-card reveal-on-scroll">
+            <article class="project-card reveal-on-scroll" data-category="mobile">
               <div class="project-badge">Mobile App</div>
               <h3>Flip Coin</h3>
               <p>
@@ -374,7 +382,7 @@
               </div>
             </article>
 
-            <article class="project-card reveal-on-scroll">
+            <article class="project-card reveal-on-scroll" data-category="web">
               <div class="project-badge">Personal Brand / Multi-Cloud</div>
               <h3>Portfolio &amp; Brand System</h3>
               <p>

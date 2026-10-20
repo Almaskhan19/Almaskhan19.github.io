@@ -376,3 +376,42 @@ if (backToTopBtn) {
   });
 }
 
+// ----------------------------------------------------
+// 8. Interactive Project Category Filtering
+// ----------------------------------------------------
+const initProjectFilters = () => {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card[data-category]');
+  if (!filterBtns.length || !projectCards.length) return;
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      // Update active button state
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter cards with smooth entrance animation
+      projectCards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        const match = filter === 'all' || category === filter;
+
+        if (match) {
+          card.classList.remove('is-hidden');
+          // Re-trigger micro-animation
+          card.classList.remove('filter-animating');
+          void card.offsetWidth; // Force DOM reflow
+          card.classList.add('filter-animating');
+        } else {
+          card.classList.add('is-hidden');
+          card.classList.remove('filter-animating');
+        }
+      });
+    });
+  });
+};
+
+initProjectFilters();
+
+
